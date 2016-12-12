@@ -1,0 +1,37 @@
+{
+  "name": "rpi_motion_cam",
+  "version": "1.0.0",
+  "description": "Raspberry Pi motion-activated camera connected to AWS IoT",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "./node_modules/.bin/eslint index.js ./lib --fix",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resteinbock/RPi_motion_cam.git"
+  },
+  "keywords": [
+    "IoT",
+    "Raspberry Pi",
+    "camera",
+    "motion",
+    "AWS"
+  ],
+  "author": "resteinbock",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/resteinbock/RPi_motion_cam/issues"
+  },
+  "homepage": "https://github.com/resteinbock/RPi_motion_cam#readme",
+  "dependencies": {
+    "async": "^2.1.4",
+    "aws-sdk": "^2.7.13",
+    "forever": "^0.15.3",
+    "onoff": "^1.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.0",
+    "eslint-config-google": "^0.7.1"
+  }
+}
