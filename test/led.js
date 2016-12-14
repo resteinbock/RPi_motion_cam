@@ -7,6 +7,8 @@ const LIMIT = 20;
 const INTERVAL = 200;
 let i = 0;
 
+console.log('test started...');
+
 async.whilst(
     function() { return i < LIMIT; },
     function(cb) {
@@ -19,6 +21,11 @@ async.whilst(
         )
     },
     function(err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('test ended...');
+        }
         led.unexport();
     }
 );

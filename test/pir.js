@@ -4,9 +4,13 @@ const config = require('../lib/config');
 let pir = new Gpio(config.MOTION.PIR_GPIO, 'in', 'both');
 const TIME = 60 * 1000;
 
+console.log('test started...');
+
 pir.watch(function (err, value) {
     if (err) {
-        return pir.unexport();
+        pir.unexport();
+        console.log(err);
+        return;
     }
 
     console.log(value);
@@ -15,6 +19,7 @@ pir.watch(function (err, value) {
 setTimeout(
     function() {
         pir.unexport();
+        console.log('test ended...');
     },
     TIME
 )
