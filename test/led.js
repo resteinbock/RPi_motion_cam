@@ -15,7 +15,7 @@ async.whilst(
             function() {
                 return led.write(i%2, cb);
             },
-            Interval
+            INTERVAL
         )
     },
     function(err) {
