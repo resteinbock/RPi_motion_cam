@@ -1,6 +1,6 @@
 let Gpio = require('onoff').Gpio;
 let async = require('async');
-const config = require('./lib/config');
+const config = require('../lib/config');
 
 let led = new Gpio(config.MOTION.LED_GPIO, 'out');
 const LIMIT = 20;
